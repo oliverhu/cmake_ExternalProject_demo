@@ -26,9 +26,9 @@ int main(int argc, char const *argv[]) {
     double *buffer1 = col0->data.data();
 
     //string field
-    auto *col3 = dynamic_cast<orc::StringVectorBatch *>(fields->fields[4]);
-    char **buffer2 = col3->data.data();
-    long *lengths = col3->length.data();
+    auto *col4 = dynamic_cast<orc::StringVectorBatch *>(fields->fields[4]);
+    char **buffer2 = col4->data.data();
+    long *lengths = col4->length.data();
 
     while (row_reader->next(*batch)) {
         for (uint32_t r = 0; r < batch->numElements; ++r) {
